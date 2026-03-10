@@ -15,8 +15,9 @@ link() {
   echo "  linked: $dst → $src"
 }
 
-echo "=== Zsh (Powerlevel10k) ==="
+echo "=== Zsh ==="
 link "$DOTFILES_DIR/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
+link "$DOTFILES_DIR/zsh/aliases.zsh" "$HOME/.aliases.zsh"
 
 echo ""
 echo "=== Tmux ==="
@@ -39,5 +40,6 @@ for f in "$DOTFILES_DIR"/claude/agents/*.md; do
 done
 
 echo ""
-echo "Done! Make sure ~/.local/bin is in your PATH."
-echo "  e.g. add to ~/.zshrc: export PATH=\"\$HOME/.local/bin:\$PATH\""
+echo "Done! Add this to your ~/.zshrc:"
+echo "  source ~/.aliases.zsh"
+echo "  export PATH=\"\$HOME/.local/bin:\$PATH\""
