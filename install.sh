@@ -15,6 +15,10 @@ link() {
   echo "  linked: $dst → $src"
 }
 
+echo "=== Zsh (Powerlevel10k) ==="
+link "$DOTFILES_DIR/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
+
+echo ""
 echo "=== Tmux ==="
 link "$DOTFILES_DIR/tmux/.tmux.conf" "$HOME/.tmux.conf"
 
