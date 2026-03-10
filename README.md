@@ -35,7 +35,7 @@ Custom slash commands and subagents for Claude Code:
 ## Install
 
 ```bash
-git clone https://github.com/susodotdev/dotfiles.git ~/Development/dotfiles
+git clone https://github.com/susoo/dotfiles.git ~/Development/dotfiles
 cd ~/Development/dotfiles
 chmod +x install.sh scripts/*.sh
 ./install.sh
