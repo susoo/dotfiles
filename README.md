@@ -4,8 +4,9 @@ My shared dev configs: zsh/p10k, tmux, git worktree scripts, and Claude Code age
 
 ## What's Included
 
-### Zsh (Powerlevel10k)
-Powerlevel10k prompt configuration.
+### Zsh
+- Powerlevel10k prompt configuration
+- Shell aliases (`pa`, `vim→nvim`, `wtn`, `wtc`, `clawd`)
 
 ### Tmux
 Catppuccin-themed tmux config with vi keys, Alt-based pane/window navigation, and popup shortcuts for lazygit, gh-dash, and lazydocker.
@@ -45,10 +46,10 @@ chmod +x install.sh scripts/*.sh
 
 The install script symlinks everything into place. Existing files get backed up as `.bak`.
 
-Make sure `~/.local/bin` is in your `PATH`:
+Then add to your `~/.zshrc`:
 
 ```bash
-# Add to ~/.zshrc
+source ~/.aliases.zsh
 export PATH="$HOME/.local/bin:$PATH"
 ```
 
