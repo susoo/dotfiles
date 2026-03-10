@@ -1,8 +1,11 @@
 # Dotfiles
 
-My shared dev configs: tmux, git worktree scripts, and Claude Code agents/commands.
+My shared dev configs: zsh/p10k, tmux, git worktree scripts, and Claude Code agents/commands.
 
 ## What's Included
+
+### Zsh (Powerlevel10k)
+Powerlevel10k prompt configuration.
 
 ### Tmux
 Catppuccin-themed tmux config with vi keys, Alt-based pane/window navigation, and popup shortcuts for lazygit, gh-dash, and lazydocker.
