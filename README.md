@@ -23,7 +23,6 @@ Custom slash commands and subagents for Claude Code:
 - `/review` — Run 4 review agents in parallel, triage findings, optionally auto-fix
 - `/test` — Browser test pipeline (QA research → browser automation with GIF recording)
 - `/handoff` — Generate a self-contained handoff prompt for another AI agent
-- `/docker-compose-logs` — Quick docker compose log viewer
 
 **Agents** (used by commands, or spawned directly):
 - `architect` — Deep-thinking code review: spec alignment, test coverage, architectural correctness
