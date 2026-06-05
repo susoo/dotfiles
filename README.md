@@ -1,15 +1,21 @@
 # Dotfiles
 
-My shared dev configs: zsh/p10k, tmux, git worktree scripts, and Claude Code agents/commands.
+My shared dev configs: zsh, tmux, ghostty, neovim, git worktree scripts, and Claude Code agents/commands.
 
 ## What's Included
 
 ### Zsh
+- `.zshrc` with vi mode, pyenv, Powerlevel10k, and shell aliases
 - Powerlevel10k prompt configuration
-- Shell aliases (`pa`, `vim→nvim`, `wtn`, `wtc`, `clawd`)
 
 ### Tmux
 Catppuccin-themed tmux config with vi keys, Alt-based pane/window navigation, and popup shortcuts for lazygit, gh-dash, and lazydocker.
+
+### Ghostty
+Terminal config with Catppuccin Macchiato theme, JetBrains Mono font, and quick terminal popup.
+
+### Neovim
+Minimal `init.lua` with Catppuccin theme, treesitter, and treesitter-textobjects.
 
 ### Worktree Scripts
 - **`wtn <branch>`** — Create a new git worktree with a dedicated tmux window and Claude Code session
@@ -49,7 +55,6 @@ The install script symlinks everything into place. Existing files get backed up 
 Then add to your `~/.zshrc`:
 
 ```bash
-source ~/.aliases.zsh
 export PATH="$HOME/.local/bin:$PATH"
 ```
 

@@ -16,12 +16,22 @@ link() {
 }
 
 echo "=== Zsh ==="
+link "$DOTFILES_DIR/zsh/.zshrc" "$HOME/.zshrc"
 link "$DOTFILES_DIR/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
-link "$DOTFILES_DIR/zsh/aliases.zsh" "$HOME/.aliases.zsh"
 
 echo ""
 echo "=== Tmux ==="
 link "$DOTFILES_DIR/tmux/.tmux.conf" "$HOME/.tmux.conf"
+
+echo ""
+echo "=== Ghostty ==="
+mkdir -p "$HOME/.config/ghostty"
+link "$DOTFILES_DIR/ghostty/config" "$HOME/.config/ghostty/config"
+
+echo ""
+echo "=== Neovim ==="
+mkdir -p "$HOME/.config/nvim"
+link "$DOTFILES_DIR/nvim/init.lua" "$HOME/.config/nvim/init.lua"
 
 echo ""
 echo "=== Worktree Scripts ==="
@@ -41,5 +51,4 @@ done
 
 echo ""
 echo "Done! Add this to your ~/.zshrc:"
-echo "  source ~/.aliases.zsh"
 echo "  export PATH=\"\$HOME/.local/bin:\$PATH\""

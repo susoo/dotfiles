@@ -1,5 +1,0 @@
-alias pa='tmux a -t pa'
-alias vim='nvim'
-alias wtn='~/Development/scripts/wtn.sh'
-alias wtc='~/Development/scripts/wtc.sh'
-alias clawd='claude --dangerously-skip-permissions'
