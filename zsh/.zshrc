@@ -33,5 +33,14 @@ alias ta='tmux a -t'
 
 export EDITOR=nvim
 
+# fzf
+eval "$(fzf --zsh)"
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND='fd --type d --hidden --follow --exclude .git'
+export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --border"
+export FZF_CTRL_T_OPTS="--preview 'bat --color=always --style=numbers {}'"
+export FZF_ALT_C_OPTS="--preview 'ls -la {}'"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

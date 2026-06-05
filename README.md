@@ -7,6 +7,11 @@ My shared dev configs: zsh, tmux, ghostty, neovim, git worktree scripts, and Cla
 ### Zsh
 - `.zshrc` with vi mode, pyenv, Powerlevel10k, and shell aliases
 - Powerlevel10k prompt configuration
+- fzf shell integration (fd-backed file lists, bat previews):
+  - `Ctrl-R` — fuzzy history search
+  - `Ctrl-T` — insert file path at cursor (with bat preview)
+  - `Alt-C` — fuzzy `cd` into a subdirectory
+  - `**<Tab>` — fuzzy completion trigger (`cd **<Tab>`, `kill **<Tab>`, `ssh **<Tab>`)
 
 ### Tmux
 Catppuccin-themed tmux config with vi keys, Alt-based pane/window navigation, and popup shortcuts for lazygit, gh-dash, and lazydocker.
@@ -15,7 +20,14 @@ Catppuccin-themed tmux config with vi keys, Alt-based pane/window navigation, an
 Terminal config with Catppuccin Macchiato theme, JetBrains Mono font, and quick terminal popup.
 
 ### Neovim
-Minimal `init.lua` with Catppuccin theme, treesitter, and treesitter-textobjects.
+Minimal `init.lua` with Catppuccin theme, treesitter, treesitter-textobjects, and fzf-lua. Leader is `Space`.
+
+fzf-lua shortcuts:
+- `<leader>f` — find files
+- `<leader>g` — live grep across the project
+- `<leader>b` — switch buffers
+- `<leader>r` — resume last picker
+- `<leader>/` — search lines in current buffer
 
 ### Worktree Scripts
 - **`wtn <branch>`** — Create a new git worktree with a dedicated tmux window and Claude Code session
@@ -61,6 +73,10 @@ export PATH="$HOME/.local/bin:$PATH"
 ## Prerequisites
 
 - [tmux](https://github.com/tmux/tmux) + [tpm](https://github.com/tmux-plugins/tpm)
+- [fzf](https://github.com/junegunn/fzf) — fuzzy finder (zsh + neovim)
+- [fd](https://github.com/sharkdp/fd) — fzf file source
+- [bat](https://github.com/sharkdp/bat) — fzf preview rendering
+- [ripgrep](https://github.com/BurntSushi/ripgrep) — fzf-lua live grep
 - [Claude Code](https://docs.anthropic.com/en/docs/claude-code)
 - [lazygit](https://github.com/jesseduffield/lazygit) (for tmux popup)
 - [gh-dash](https://github.com/dlvhdr/gh-dash) (for tmux popup)

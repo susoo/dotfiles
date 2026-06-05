@@ -1,3 +1,6 @@
+-- Leader
+vim.g.mapleader = " "
+
 -- Disable unused providers (speeds up startup)
 vim.g.loaded_python3_provider = 0
 vim.g.loaded_ruby_provider = 0
@@ -60,6 +63,18 @@ require("lazy").setup({
       map("ic", "@class.inner")
       map("aa", "@parameter.outer")
       map("ia", "@parameter.inner")
+    end,
+  },
+  {
+    "ibhagwan/fzf-lua",
+    config = function()
+      local fzf = require("fzf-lua")
+      fzf.setup({ "default" })
+      vim.keymap.set("n", "<leader>f", fzf.files,     { desc = "Files" })
+      vim.keymap.set("n", "<leader>g", fzf.live_grep, { desc = "Grep" })
+      vim.keymap.set("n", "<leader>b", fzf.buffers,   { desc = "Buffers" })
+      vim.keymap.set("n", "<leader>r", fzf.resume,    { desc = "Resume last" })
+      vim.keymap.set("n", "<leader>/", fzf.blines,    { desc = "Search buffer" })
     end,
   },
 })
