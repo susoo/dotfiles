@@ -20,6 +20,7 @@ Scan every changed line for these violations:
 7. **Hardcoded URLs/IPs/ports** — Hardcoded `http://`, `https://`, IP addresses, or port numbers in non-config, non-test files (config files and constants files are exempt)
 8. **Unused imports** — Imported modules/packages that are not referenced in the file
 9. **SQL string concatenation** — SQL queries built with string concatenation or f-strings instead of parameterized queries
+10. **Backwards compatibility code** — Re-exports for old import paths, renamed variables keeping old names (e.g., `old_name = new_name`), deprecated wrappers that delegate to new implementations, compatibility shims/adapters, `// backwards compat`, `// legacy`, `// deprecated` comments explaining compat intent, and version-checking conditional logic (e.g., `if version < X`)
 
 ## Process
 
@@ -42,6 +43,7 @@ At the end, provide a summary table:
 | 1. Hardcoded secrets | N |
 | 2. Debug statements | N |
 | ... | ... |
+| 10. Backwards compat | N |
 | **Total** | **N** |
 
 ## Rules
