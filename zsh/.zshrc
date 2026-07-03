@@ -23,8 +23,8 @@ export CPPFLAGS="-I/opt/homebrew/opt/openssl@3/include"
 
 alias pa='tmux a -t pa'
 alias vim='nvim'
-alias wtn='~/Development/dotfiles/scripts/wtn.sh'
-alias wtc='~/Development/dotfiles/scripts/wtc.sh'
+alias wtn='~/Development/komandant/plugins/worktree-tools/bin/wtn'
+alias wtc='~/Development/komandant/plugins/worktree-tools/bin/wtc'
 alias clawd='claude --dangerously-skip-permissions'
 alias dcu='docker compose up -d'
 alias dcd='docker compose down'
