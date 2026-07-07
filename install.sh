@@ -34,6 +34,11 @@ mkdir -p "$HOME/.config/nvim"
 link "$DOTFILES_DIR/nvim/init.lua" "$HOME/.config/nvim/init.lua"
 
 echo ""
+echo "=== Lazygit ==="
+mkdir -p "$HOME/Library/Application Support/lazygit"
+link "$DOTFILES_DIR/lazygit/config.yml" "$HOME/Library/Application Support/lazygit/config.yml"
+
+echo ""
 echo "=== Worktree Scripts ==="
 mkdir -p "$HOME/.local/bin"
 link "$HOME/Development/komandant/plugins/worktree-tools/bin/wtc" "$HOME/.local/bin/wtc"
