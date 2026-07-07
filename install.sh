@@ -46,12 +46,15 @@ link "$HOME/Development/komandant/plugins/worktree-tools/bin/wtn" "$HOME/.local/
 
 echo ""
 echo "=== Claude Code ==="
-mkdir -p "$HOME/.claude/commands" "$HOME/.claude/agents"
+mkdir -p "$HOME/.claude/commands" "$HOME/.claude/agents" "$HOME/.claude/skills"
 for f in "$DOTFILES_DIR"/claude/commands/*.md; do
   link "$f" "$HOME/.claude/commands/$(basename "$f")"
 done
 for f in "$DOTFILES_DIR"/claude/agents/*.md; do
   link "$f" "$HOME/.claude/agents/$(basename "$f")"
+done
+for d in "$DOTFILES_DIR"/claude/skills/*/; do
+  link "${d%/}" "$HOME/.claude/skills/$(basename "$d")"
 done
 
 echo ""
